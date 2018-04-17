@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Image from './components/image/Image'
 import images from './images.json'
 import Header from './components/header/Header'
-
+import './app.css'
 
 class App extends Component {
   
@@ -10,8 +10,7 @@ class App extends Component {
     clicked: [],
     score: 0,
     hScore: 0
-  }
-
+   }
   
   updateClicked = name => {
     if(this.state.clicked.indexOf(name)>-1){
@@ -27,6 +26,7 @@ class App extends Component {
       this.setState({
         score: 0
       })
+      return;
     } else {
       var score = this.state.score;
       score++;

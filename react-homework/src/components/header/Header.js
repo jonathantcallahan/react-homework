@@ -1,4 +1,5 @@
 import React from 'react'
+import './header.css'
 
 class Header extends React.Component {
     
@@ -9,7 +10,7 @@ class Header extends React.Component {
                 <div id='center-text'>Click an image to begin!</div>
                 <div id='score'>
                     <p>Score: {this.props.score}</p>
-                    <p>High Score: {this.props.hScore}</p>
+                    <p id='hs'>High Score: {this.props.hScore}</p>
                 </div>
             </div>
         )

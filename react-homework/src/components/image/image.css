@@ -2,7 +2,8 @@
     padding: 5px;
     border: 2px gray solid;
     border-radius: 2px;
-    display: inline-block
+    display: inline-block;
+    margin: 15px
 }
 
 .ind-img {
