@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import Image from './components/Image'
+import Image from './components/image/Image'
 import images from './images.json'
+import Header from './components/header/Header'
 
 class App extends Component {
   render() {
     return (
       <div>
+        <Header />
         {
           images.map(e => (
-            <Image img={e.img}/>
+            <Image name={e.name} img={e.img}/>
           ))
         }
       </div>
