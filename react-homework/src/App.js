@@ -16,14 +16,25 @@ class App extends Component {
   updateClicked = name => {
     if(this.state.clicked.indexOf(name)>-1){
       alert('Aw you lost! Try again.')
+      this.setState({
+        clicked: []
+      })
       if(this.state.score > this.state.hScore){
         this.setState({
           hScore: this.state.score
         })
       }
+      this.setState({
+        score: 0
+      })
     } else {
       var score = this.state.score;
       score++;
+      if(score > this.state.hScore){
+        this.setState({
+          hScore: score
+        })
+      }
       this.setState({
         score: score
       })
